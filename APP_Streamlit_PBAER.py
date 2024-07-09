@@ -376,10 +376,12 @@ with met:
     # Executar o conteúdo do arquivo Metodologia.py
     exec(metodologia)
 
-    
-    
-    
-    
-    
-    
-    
+with faq:
+    st.title ("FAQ")
+    st.write("---")
+
+    perguntas = "FAQ.py"
+    #Ler o conteúdo do arquivo FAQ.py
+    with open(perguntas,'r') as file:
+        perguntas = file.read()
+    exec(perguntas)
